@@ -13,8 +13,10 @@ start() ->
 
 
 start(_StartType, _StartArgs) ->
+    io:format("~n APPLICATION IS STARTING .....~n "),
     {ok,Sup} = sup_sup:start_link(),
     register(pushnotification, self()),
+    io:format("~n Sup in Application = ~p  ~n ",[Sup]),
     {ok,Sup}.
 	
 stop(_Args) ->
