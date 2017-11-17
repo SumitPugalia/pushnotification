@@ -1,11 +1,16 @@
 # pushnotification
-PushNotification for emqttd
+PushNotification Service
 
-This Project is used along with the emqttd or any other chatting application that uses pub/sub model to manually push "pushnotification" to all the users.
+This Project is intended to be used along other applications in which each user represent unique process in the backend. Just pass the payload to be sent and the list of the users.
 
-run the start.sh script 
-connect to console using connect.sh script
-in console start the application as application:start(pushnotification)
+#Example
 
+Payload = #{msg => hello} 
+It can be of any format depending on the application,
+Participants = [<0.12.0>, <0.65.0>]
+List of pids
+Just add, 
+send_notification ! {send_message, Payload, Participants}
+from your application to send push to the users.
 
 
