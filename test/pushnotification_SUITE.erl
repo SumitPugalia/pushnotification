@@ -6,7 +6,7 @@
 -spec all() -> [application_api].
 all() -> [application_api].
 
--spec application_api(sa_ct:config()) -> ok.
+-spec application_api(pn_ct:config()) -> ok.
 application_api(_Config) ->
   false = is_app_running(),
   ok = application:start(pushnotification),
